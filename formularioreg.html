@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Registro</title>
+    <link rel="stylesheet" href="forminic.css">
+</head>
+
+<body>
+    <!-- Header -->
+    <header>
+        <div class="logo">
+            <img src="logoguevara.png" alt="Logo del colegio">
+        </div>
+        <h1>Colegio Técnico Dr. Ernesto Guevara</h1>
+    </header>
+
+    <!-- Formulario de registro -->
+    <div class="formulario">
+        <h1>Registro</h1>
+        <form method="post">
+            <div class="campo">
+                <input type="text" required>
+                <label>Nombre/Apellido</label>
+            </div>
+            <div class="campo">
+                <input type="email" required>
+                <label>Email</label>
+            </div>
+            <div class="campo">
+                <input type="tel" required>
+                <label>Número de Teléfono</label>
+            </div>
+            <div class="campo">
+                <input type="text" required>
+                <label>DNI</label>
+            </div>
+            <div class="campo">
+                <input type="date" required>
+            </div>
+            <div class="campo">
+                <select required>
+                    <option value="" disabled selected>Seleccionar Rol</option>
+                    <option value="administrador">Administrador</option>
+                    <option value="profesor">Profesor</option>
+                    <option value="alumno">Alumno</option>
+                </select>
+                <label>Rol</label>
+            </div>
+            <input type="submit" value="Registrarse">
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2024 Impacto Digital</p>
+        <ul>
+            <li><a href="#">Política de Privacidad</a></li>
+            <li><a href="#">Términos de Uso</a></li>
+            <li><a href="#">Contacto</a></li>
+        </ul>
+    </footer>
+</body>
+
+</html>

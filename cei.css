@@ -1,0 +1,184 @@
+/* Diseño del cuerpo */
+body {
+    margin: 0;
+    padding: 0;
+    font-family: Montserrat, sans-serif;
+    background: linear-gradient(150deg, #961f1f, #262626);
+    color: white;
+}
+
+/* Barra de navegación */
+nav {
+    background-color: #2c2c2c;
+    padding: 15px;
+    position: fixed;
+    width: 100%;
+    top: 0;
+    left: 0;
+    z-index: 10;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Logo */
+nav .logo {
+    position: right; /* Fija el logo */
+    bottom: 15px; /* Posición en la esquina inferior izquierda */
+    left: 15px;
+}
+
+nav .logo img {
+    width: 20%;
+    height: auto;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    margin: 0;
+    display: flex;
+    justify-content: center; /* Centra los elementos dentro de la lista */
+}
+
+nav ul li {
+    margin: 0 20px;
+}
+
+nav ul li a {
+    text-decoration: none;
+    color: white;
+    font-size: 1rem;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #919191;
+}
+
+/* Sección de encabezado */
+header {
+    text-align: center;
+    padding: 150px 20px 50px;
+    background: rgba(0, 0, 0, 0.5);
+    margin-top: 50px; /* Separación del nav */
+}
+
+header h1 {
+    font-size: 40px;
+    margin: 0;
+}
+
+header p {
+    font-size: 24px;
+    color: #adadad;
+}
+
+/* Sección de introducción */
+#introduccion {
+    padding: 50px 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    /* Eliminar text-align: center para usar Flexbox */
+    /* text-align: center; */
+}
+
+#introduccion h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #adadad;
+    padding-bottom: 10px;
+    text-align: center; /* Mantener el título centrado */
+}
+
+#introduccion p {
+    font-size: 18px;
+    color: #e6e6e6;
+}
+
+/* Nuevo contenedor para la introducción usando Flexbox */
+.contenido-introduccion {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 15px; /* Espacio entre imagen y texto */
+    flex-wrap: wrap; /* Permitir que los elementos se envuelvan en pantallas pequeñas */
+}
+
+/* Estilos para la imagen */
+.guevaraimg {
+    flex: 1 1 200px; /* Permitir que la imagen crezca y se encoja */
+    max-width: 250px; /* Limitar el ancho máximo de la imagen */
+}
+
+.guevaraimg img {
+    width: 200%;
+    height: auto;
+    border-radius: 10px; /* Opcional: redondear las esquinas de la imagen */
+    display: flexbox;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Secciones */
+section {
+    padding: 50px 20px;
+    margin: 0 auto;
+    max-width: 800px;
+    font-size: 15px;
+}
+
+section h2 {
+    font-size: 28px;
+    margin-bottom: 20px;
+    border-bottom: 2px solid #adadad;
+    padding-bottom: 10px;
+}
+
+section p {
+    font-size: 18px;
+    color: #e6e6e6;
+}
+
+#informacion-form {
+    display: grid;
+    grid-template-columns: 1fr 2fr;
+    gap: 10px; /* Ajusta el espacio entre elementos según tus necesidades */
+}
+
+.fila {
+    display: contents;
+}
+
+/* Ajustes para dispositivos pequeños */
+@media (max-width: 768px) {
+    header h1 {
+        font-size: 32px;
+    }
+
+    nav ul {
+        flex-direction: column;
+    }
+
+    nav ul li {
+        margin: 10px 0;
+    }
+
+    section {
+        padding: 30px 10px;
+    }
+
+    /* Asegurar que el contenido de introducción se vea bien en pantallas pequeñas */
+    .contenido-introduccion {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .guevaraimg {
+        max-width: 100%;
+    }
+
+    #introduccion p {
+        text-align: center; /* Centrar el texto en pantallas pequeñas */
+    }
+}

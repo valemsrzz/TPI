@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Boletín Digital de Calificaciones - Colegio Provincial Dr. Ernesto Guevara</title>
+    <link rel="stylesheet" href="cei.css">
+</head>
+
+<body>
+    <!-- Barra de navegación -->
+    <nav>
+        <ul>
+            <li><a href="inicio.html">Inicio</a></li>
+            <li><a href="calificaciones.html">Calificaciones</a></li>
+            <li><a href="anuncios.html">Anuncios</a></li>
+            <li><a href="calendario.html">Calendario</a></li->
+        </ul>
+    </nav>
+
+    <!-- Título de la página -->
+    <header>
+        <h1>Boletín Digital de Calificaciones</h1>
+        <p>Consulta y carga de calificaciones para los estudiantes del Colegio Provincial Dr. Ernesto Guevara</p>
+    </header>
+
+    <!-- Información del estudiante y tutor -->
+    <section id="informacion">
+        <h2>Información del Estudiante</h2>
+        <form id="informacion-form">
+            <label for="tutor">Nombre del Tutor a Cargo:</label>
+            <input type="text" id="tutor" name="tutor" required>
+
+            <label for="estudiante">Nombre del Estudiante:</label>
+            <input type="text" id="estudiante" name="estudiante" required>
+
+            <label for="faltas">Faltas:</label>
+            <input type="number" id="faltas" name="faltas" min="0" required>
+
+            <label for="faltas_justificadas">Faltas Justificadas:</label>
+            <input type="number" id="faltas_justificadas" name="faltas_justificadas" min="0">
+
+            <label for="sanciones">Sanciones:</label>
+            <input type="text" id="sanciones" name="sanciones">
+
+            <label for="tardanzas">Tardanzas:</label>
+            <input type="number" id="tardanzas" name="tardanzas" min="0">
+        </form>
+    </section>
+
+    <!-- Tabla de calificaciones -->
+    <section id="boletin">
+        <h2>Calificaciones por Materia</h2>
+        <form id="calificaciones-form" action="guardar_calificaciones.php" method="POST">
+            <table>
+                <thead>
+                    <tr>
+                        <th>Materia</th>
+                        <th>1er Informe</th>
+                        <th>2do Informe</th>
+                        <th>Nota Final</th>
+                        <th>1er Informe</th>
+                        <th>2do Informe</th>
+                        <th>Nota Final</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <!-- Repetir la siguiente fila para cada materia -->
+                    <tr>
+                        <td>Matemáticas</td>
+                        <td><input type="number" name="matematicas_1informe1" min="1" max="10"></td>
+                        <td><input type="number" name="matematicas_1informe2" min="1" max="10"></td>
+                        <td><output name="matematicas_1final" class="promedio">-</output></td>
+                        <td><input type="number" name="matematicas_2informe1" min="1" max="10"></td>
+                        <td><input type="number" name="matematicas_2informe2" min="1" max="10"></td>
+                        <td><output name="matematicas_2final" class="promedio">-</output></td>
+                    </tr>
+                    <tr>
+                        <td>Inglés Técnico</td>
+                        <td><input type="number" name="ingles_1informe1" min="1" max="10"></td>
+                        <td><input type="number" name="ingles_1informe2" min="1" max="10"></td>
+                        <td><output name="ingles_1final" class="promedio">-</output></td>
+                        <td><input type="number" name="ingles_2informe1" min="1" max="10"></td>
+                        <td><input type="number" name="ingles_2informe2" min="1" max="10"></td>
+                        <td><output name="ingles_2final" class="promedio">-</output></td>
+                    </tr>
+                    <tr>
+                        <td>Marco jurídico</td>
+                        <td><input type="number" name="marcojuridico_1informe1" min="1" max="10"></td>
+                        <td><input type="number" name="ingles_1informe2" min="1" max="10"></td>
+                        <td><output name="marcojuridico_1final" class="promedio">-</output></td>
+                        <td><input type="number" name="marcojuridico_2informe1" min="1" max="10"></td>
+                        <td><input type="number" name="marcojuridico_2informe2" min="1" max="10"></td>
+                        <td><output name="marcojuridico_2final" class="promedio">-</output></td>
+                    </tr>
+
+                    <!-- Ejemplo para una materia técnica -->
+                    <tr>
+                        <td>Hardware 4</td>
+                        <td><input type="number" name="hardware4_1informe1" min="1" max="10"></td>
+                        <td><input type="number" name="hardware4_1informe2" min="1" max="10"></td>
+                        <td><output name="hardware4_1final" class="promedio">-</output></td>
+                        <td><input type="number" name="hardware4_2informe1" min="1" max="10"></td>
+                        <td><input type="number" name="hardware4_2informe2" min="1" max="10"></td>
+                        <td><output name="hardware4_2final" class="promedio">-</output></td>
+                    </tr>
+                    <td>Asistencia</td>
+                    <td><input type="number" name="asistencia_1informe1" min="1" max="10"></td>
+                    <td><input type="number" name="asistencia_1informe2" min="1" max="10"></td>
+                    <td><output name="asistencia_1final" class="promedio">-</output></td>
+                    <td><input type="number" name="asistencia_2informe1" min="1" max="10"></td>
+                    <td><input type="number" name="asistencia_2informe2" min="1" max="10"></td>
+                    <td><output name="asistencia_2final" class="promedio">-</output></td>
+                    </tr>
+                    <td>Redes III</td>
+                    <td><input type="number" name="redesIII_1informe1" min="1" max="10"></td>
+                    <td><input type="number" name="redesIII_1informe2" min="1" max="10"></td>
+                    <td><output name="redesIII_1final" class="promedio">-</output></td>
+                    <td><input type="number" name="redesIII_2informe1" min="1" max="10"></td>
+                    <td><input type="number" name="redesIII_2informe2" min="1" max="10"></td>
+                    <td><output name="redesIII_2final" class="promedio">-</output></td>
+                    </tr>
+                    <td>Programación</td>
+                    <td><input type="number" name="programacion_1informe1" min="1" max="10"></td>
+                    <td><input type="number" name="programacion_1informe2" min="1" max="10"></td>
+                    <td><output name="programacion_1final" class="promedio">-</output></td>
+                    <td><input type="number" name="programacion_2informe1" min="1" max="10"></td>
+                    <td><input type="number" name="programacion_2informe2" min="1" max="10"></td>
+                    <td><output name="programacion_2final" class="promedio">-</output></td>
+                    </tr>
+                    <td>Autogestión</td>
+                    <td><input type="number" name="autogestion_1informe1" min="1" max="10"></td>
+                    <td><input type="number" name="autogestion_1informe2" min="1" max="10"></td>
+                    <td><output name="autogestion_1final" class="promedio">-</output></td>
+                    <td><input type="number" name="autogestion_2informe1" min="1" max="10"></td>
+                    <td><input type="number" name="autogestion_2informe2" min="1" max="10"></td>
+                    <td><output name="autogestion_2final" class="promedio">-</output></td>
+                    </tr>
+                    <td>Práct. Profesionalizantes</td>
+                    <td><input type="number" name="practicas_1informe1" min="1" max="10"></td>
+                    <td><input type="number" name="practicas_1informe2" min="1" max="10"></td>
+                    <td><output name="practicas_1final" class="promedio">-</output></td>
+                    <td><input type="number" name="practicas_2informe1" min="1" max="10"></td>
+                    <td><input type="number" name="practicas_2informe2" min="1" max="10"></td>
+                    <td><output name="practicas_2final" class="promedio">-</output></td>
+                    </tr>
+                    <td>EDI: Arduino</td>
+                    <td><input type="number" name="arduino_1informe1" min="1" max="10"></td>
+                    <td><input type="number" name="arduino_1informe2" min="1" max="10"></td>
+                    <td><output name="arduino_1final" class="promedio">-</output></td>
+                    <td><input type="number" name="arduino_2informe1" min="1" max="10"></td>
+                    <td><input type="number" name="arduino_2informe2" min="1" max="10"></td>
+                    <td><output name="arduino_2final" class="promedio">-</output></td>
+                    </tr>
+                </tbody>
+            </table>
+            <input type="submit" value="Guardar Cambios">
+        </form>
+    </section>
+
+    <script src="script.js"></script>
+</body>
+
+</html>
